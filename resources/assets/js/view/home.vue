@@ -3,11 +3,13 @@
 		<div class="col-md-12">
 			<div class="card card-default" v-for="status in statuses">
 				<div class="card-header">
-					<div>
-						<!--{{ status.user.name }} said....-->
-					</div>
-					<div>
-						{{ status.created_at | ago | capitalize}}
+					<div class="row">
+						<div class="col-md-6">
+							{{ status.user.name }}
+						</div>
+						<div class="col-md-6 text-right">
+							{{ status.created_at | ago | capitalize}}
+						</div>
 					</div>
 				</div>
 
@@ -72,7 +74,7 @@
 		background-color: snow;
 	}
 
-	.row {
+	.justify-content-center {
 		margin-top: 2rem;
 	}
 </style>
